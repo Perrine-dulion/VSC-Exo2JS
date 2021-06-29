@@ -1,31 +1,28 @@
-const resultatSwitch = document.getElementById('resultat_switch');
-const grade = parseInt(prompt('Encoder une note de 0 à 20'));
+const resultatIf = document.getElementById('resultat_if');
+const nb = parseInt(prompt('Encoder une note de 0 à 20'));
 
-switch (grade) {
-    case 20: 
-        resultatSwitch.innerHTML = 'Excellent'; 
-        break;
-    case (17-19): 
-        resultatSwitch.innerHTML = 'Tres bien'; 
-        break;
-    case (13-16): 
-        resultatSwitch.innerHTML = 'Bien'; 
-        break;
-    case (10-12): 
-        resultatSwitch.innerHTML = 'Suffisant'; 
-        break;
-    case (8-9): 
-        resultatSwitch.innerHTML = 'Insuffisant'; 
-        break;
-    case (0-7): 
-        resultatSwitch.innerHTML = 'Echec'; 
-        break;
+if(isNaN(nb)) {
+    resultatIf.innerHTML = `Do you speak french? 0 à 20 Kontadit`;
+}
+else if (nb === 20) {
+    resultatIf.innerHTML = `Excellent`;
+}
+else if(nb >= 17 && nb < 19) {
+    resultatIf.innerHTML = `Tres bien`;
+}
 
-    default: 
-        
-        if(isNaN(grade)) 
-            resultatSwitch.innerHTML = 'Do you speak french?entre 0 et 20 kontadit'; 
-        else 
-            resultatSwitch.innerHTML = 'Valeur en dehors du scope !'; 
-        break;
+else if(nb >= 13 && nb < 16) {
+    resultatIf.innerHTML = `Bien`;
+}
+
+else if(nb >= 10 && nb < 12) {
+    resultatIf.innerHTML = `Suffisant`;
+}
+
+else if(nb >= 8 && nb < 9) {
+    resultatIf.innerHTML = `Insuffisant`;
+}
+
+else if(nb >= 0 && nb < 7) {
+    resultatIf.innerHTML = `Echec`;
 }
