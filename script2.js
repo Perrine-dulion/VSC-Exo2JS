@@ -1,7 +1,7 @@
 const resultatIf = document.getElementById('resultat_if');
 const nb = parseInt(prompt('Encoder une note de 0 à 20'));
 
-if(isNaN(nb)) {
+if(nb >20) {
     resultatIf.innerHTML = `Do you speak french? 0 à 20 Kontadit`;
 }
 else if (nb === 20) {
